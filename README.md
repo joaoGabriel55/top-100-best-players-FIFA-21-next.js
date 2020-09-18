@@ -1,4 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FIFA 21 - Top 100 Best players
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app), that has as objective learn more about Next.js with the [EA Sports FIFA 21 Top 100 players database](https://www.ea.com/games/fifa/fifa-21/ratings/ratings-database) using their API services:
+
+- [Top 100 players pageable list](https://ratings-api.ea.com/v2/entities/fifa-21?filter=&sort=ranking:ASC&limit=20&offset=0)
+
+- [Specific player select](https://ratings-api.ea.com/v2/entities/fifa-21?filter=primaryKey:158023)
+
+- [Specific player picture](https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-21/ratings-collective/f20assets/player-headshots/158023.png)
+
+- [Specific player UT Card](https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-21/ratings-collective/f20assets/player-shields/158023.png)
+
+
+## Features - TODO
+
+- List players pageble
+- Select a player
+- Build radar chart
+- Deploy AWS
+
 
 ## Getting Started
 

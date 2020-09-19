@@ -1,4 +1,7 @@
 .container {
+  background-image: url('https://compass-ssl.xbox.com/assets/f9/35/f9353ddb-9261-4bf1-8bfc-e74652efc355.jpg?n=84352220_Image-1084_Details-intro_1920x500.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -49,11 +52,15 @@
 .title {
   margin: 0;
   line-height: 1.15;
+  color: white;
   font-size: 3rem;
+  font-style: italic;
+  text-shadow: 2px 2px 18px #292929;
 }
 
 .subtitle a {
   color: #0070f3;
+  font-size: 1rem;
   text-decoration: none;
 }
 
@@ -64,7 +71,7 @@
 
 .description {
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .code {

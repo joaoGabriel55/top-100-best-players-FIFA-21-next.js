@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import PlayerList from './components/PlayerList.js'
+import PlayerList from '../components/PlayerList'
 
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,13 +13,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Top 100 Best FIFA 21 Players
+          FIFA 21 - Top 100 Best players
         </h1>
-        <h4 className={styles.subtitle}>
-          <a target="_blank" href="https://www.ea.com/games/fifa/fifa-21/ratings/ratings-database">
-            See on Official EA Sports site
-          </a>
-        </h4>
         <PlayerList />
       </main>
       <footer className={styles.footer}>
@@ -26,6 +22,11 @@ export default function Home() {
           Made with ❤️ by <a target="_blank" href="https://github.com/joaoGabriel55">joaoGabriel55</a>
         </h5>
       </footer>
+      <h4 className={styles.subtitle}>
+        <a target="_blank" href="https://www.ea.com/games/fifa/fifa-21/ratings/ratings-database">
+          Click here to see players in official EA Sports site
+          </a>
+      </h4>
     </div>
   )
 }

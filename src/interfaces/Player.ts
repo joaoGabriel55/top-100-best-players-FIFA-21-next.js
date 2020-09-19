@@ -1,6 +1,6 @@
 export interface Player {
 
-    primaryKey: Number,
+    primaryKey: number,
     fullNameForSearch: String,
     teamname: String,
     overall_rating: Number,

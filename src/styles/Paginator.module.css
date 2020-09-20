@@ -11,6 +11,7 @@
     padding: 8px 12px;
     border: 1px solid gray;
     border-radius: 8px;
+    box-shadow: 2px 4px 6px #888888;
 }
 
 .active {
@@ -35,6 +36,7 @@
     padding: 8px 12px;
     border: 1px solid gray;
     border-radius: 8px;
+    box-shadow: 2px 4px 6px #888888;
 }
 
 .changePageBtnDisabled {
@@ -44,6 +46,7 @@
     padding: 8px 12px;
     border: 1px solid gray;
     border-radius: 8px;
+    box-shadow: 2px 4px 6px #888888;
 }
 
 .changePageBtn:hover {

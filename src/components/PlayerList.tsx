@@ -8,6 +8,7 @@ import Paginator from './Paginator'
 import { connect } from "react-redux";
 import { setActualOffsetValue } from "../redux/actions";
 import { getActualOffset } from "../redux/selectors";
+import Loading from './Loading'
 
 function PlayerList(props: any) {
   const [limit, setLimit] = useState(10)
@@ -71,7 +72,7 @@ function PlayerList(props: any) {
               </div>
             </div>
           )) :
-          <p>Loading</p>
+          <Loading />
         }
       </div>
       <Paginator

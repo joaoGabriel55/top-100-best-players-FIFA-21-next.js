@@ -16,7 +16,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - List players pageble [100%]
 - Select a player [100%]
 - Animate UT card select [100%]
-- Deploy AWS [0%]
+- Deploy on Vercel [100%]
 
 ## Techs used
 

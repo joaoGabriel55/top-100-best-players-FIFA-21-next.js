@@ -5,9 +5,12 @@ import { Player } from '../interfaces/Player'
 import styles from '../styles/PlayerList.module.css'
 import Paginator from './Paginator'
 
-export default function PlayerList() {
+import { connect } from "react-redux";
+import { setActualOffsetValue } from "../redux/actions";
+import { getActualOffset } from "../redux/selectors";
+
+function PlayerList(props: any) {
   const [limit, setLimit] = useState(10)
-  const [offset, setOffset] = useState(0)
 
   const listPlayersAPI = (limit: Number, offset: Number) => {
     return `https://ratings-api.ea.com/v2/entities/fifa-21?filter=&sort=ranking:ASC&limit=${limit}&offset=${offset}`
@@ -21,34 +24,35 @@ export default function PlayerList() {
     return `https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-21/ratings-collective/f20assets/player-headshots/${id}.png`
   }
 
-  const { data } = useFetch<Player[]>(listPlayersAPI(limit, offset))
+  const { data } = useFetch<Player[]>(listPlayersAPI(limit, props.actualOffsetValue))
 
   const backPage = (e: any) => {
     e.preventDefault()
-    let page = offset
+    let page = props.actualOffsetValue
 
     if (page === 0)
       return
 
-    setOffset(page - 10)
+    props.setActualOffsetValue({ actualOffset: page - 10 })
     window.scrollTo(0, 0)
   }
 
   const nextPage = (e: any) => {
     e.preventDefault()
-    let page = offset
+    let page = props.actualOffsetValue
 
     if (page > 80)
       return
 
-    setOffset(page + 10)
+    props.setActualOffsetValue({ actualOffset: page + 10 })
     window.scrollTo(0, 0)
   }
 
   const setActualPage = (val: number) => {
-    setOffset(val)
+    props.setActualOffsetValue({ actualOffset: val })
     window.scrollTo(0, 0)
   }
+
   return (
     <section className={styles.datatable}>
       <div>
@@ -71,7 +75,7 @@ export default function PlayerList() {
         }
       </div>
       <Paginator
-        actualPage={offset}
+        actualPage={props.actualOffsetValue}
         setActualPage={setActualPage}
         backEvent={(e: any) => backPage(e)}
         nextEvent={(e: any) => nextPage(e)}
@@ -79,3 +83,13 @@ export default function PlayerList() {
     </section>
   )
 }
+const mapStateToProps = (state: any) => {
+  const actualOffsetValue = getActualOffset(state)
+  console.log(actualOffsetValue)
+  return { actualOffsetValue }
+}
+
+export default connect(
+  mapStateToProps,
+  { setActualOffsetValue }
+)(PlayerList)

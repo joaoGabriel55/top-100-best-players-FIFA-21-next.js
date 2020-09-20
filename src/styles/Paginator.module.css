@@ -13,17 +13,31 @@
     border-radius: 8px;
 }
 
+.active {
+    background-color: rgb(84, 28, 136);
+    color: aliceblue;
+}
+
 .pageBtn:hover {
     background-color: blueviolet;
     color: aliceblue;
 }
 
 .pageBtn:active {
-    background-color: #541c88;
+    background-color: rgb(84, 28, 136);
     color: aliceblue;
 }
 
 .changePageBtn {
+    text-decoration: none;
+    cursor: pointer;
+    margin: 8px 8px;
+    padding: 8px 12px;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+.changePageBtnDisabled {
     text-decoration: none;
     cursor: pointer;
     margin: 8px 8px;

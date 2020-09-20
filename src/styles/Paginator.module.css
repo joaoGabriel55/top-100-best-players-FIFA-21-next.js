@@ -1,0 +1,60 @@
+.paginator {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pageBtn {
+    background-color: white;
+    cursor: pointer;
+    margin: 8px 8px;
+    padding: 8px 12px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    box-shadow: 2px 4px 6px #888888;
+}
+
+.active {
+    background-color: rgb(84, 28, 136);
+    color: aliceblue;
+}
+
+.pageBtn:hover {
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+.pageBtn:active {
+    background-color: rgb(84, 28, 136);
+    color: aliceblue;
+}
+
+.changePageBtn {
+    text-decoration: none;
+    cursor: pointer;
+    margin: 8px 8px;
+    padding: 8px 12px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    box-shadow: 2px 4px 6px #888888;
+}
+
+.changePageBtnDisabled {
+    text-decoration: none;
+    cursor: pointer;
+    margin: 8px 8px;
+    padding: 8px 12px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    box-shadow: 2px 4px 6px #888888;
+}
+
+.changePageBtn:hover {
+    background-color: blueviolet;
+    color: aliceblue;
+}
+
+.changePageBtn:active {
+    background-color: rgb(84, 28, 136);
+    color: aliceblue;
+}

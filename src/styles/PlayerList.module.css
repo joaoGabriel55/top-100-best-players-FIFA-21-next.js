@@ -1,0 +1,43 @@
+.datatable {
+    margin-top: 30%;
+}
+
+.tile {
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 8%;
+}
+.playerOverall {
+    margin-left: 8%;
+}
+
+.playerOverall h1 {
+    font-size: 6em;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.playerOverall img {
+    margin-left: 24px;
+}
+
+.shieldBackground {
+    cursor: pointer;
+    background-image: url('https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-21/ratings-collective/f20assets/player-shields/fifa-shield-bg-gold.png');
+    background-size: 100%;
+    padding-bottom: 16%;
+    background-repeat: no-repeat;
+}
+
+.shieldBackground:hover {
+    position: relative;
+    animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+    0% {bottom: 0px;}
+    50% {bottom: 25px;}
+    100% {bottom: 0px;}
+  }

@@ -3,12 +3,12 @@
 }
 
 .tile {
-    border-bottom: 1px solid #eaeaea;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    margin-top: 8%;
+    padding-left: 2%;
 }
+
 .playerOverall {
     margin-left: 8%;
 }

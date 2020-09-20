@@ -11,7 +11,7 @@ import { getActualOffset } from "../redux/selectors";
 import Loading from './Loading'
 
 function PlayerList(props: any) {
-  const [limit, setLimit] = useState(10)
+  const [limit, setLimit] = useState(20)
 
   const listPlayersAPI = (limit: Number, offset: Number) => {
     return `https://ratings-api.ea.com/v2/entities/fifa-21?filter=&sort=ranking:ASC&limit=${limit}&offset=${offset}`
@@ -34,7 +34,7 @@ function PlayerList(props: any) {
     if (page === 0)
       return
 
-    props.setActualOffsetValue({ actualOffset: page - 10 })
+    props.setActualOffsetValue({ actualOffset: page - limit })
     window.scrollTo(0, 0)
   }
 
@@ -45,7 +45,7 @@ function PlayerList(props: any) {
     if (page > 80)
       return
 
-    props.setActualOffsetValue({ actualOffset: page + 10 })
+    props.setActualOffsetValue({ actualOffset: page + limit })
     window.scrollTo(0, 0)
   }
 
@@ -70,7 +70,9 @@ function PlayerList(props: any) {
                 <h1>{player.overall_rating}</h1>
                 <img src={getNationFlag(player.nationality)} />
               </div>
+              <hr />
             </div>
+
           )) :
           <Loading />
         }
@@ -86,7 +88,6 @@ function PlayerList(props: any) {
 }
 const mapStateToProps = (state: any) => {
   const actualOffsetValue = getActualOffset(state)
-  console.log(actualOffsetValue)
   return { actualOffsetValue }
 }
 

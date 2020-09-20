@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { useFetch } from '../../hooks/useFetch'
 import { Player } from '../../interfaces/Player'
 import styles from '../../styles/Home.module.css'
+import stylesPlayerInfo from '../../styles/PlayerInfo.module.css'
 import Loading from '../../components/Loading'
 
 
@@ -24,7 +25,7 @@ export default function PlayerInfo() {
                 data ?
                     <>
                         <Head><title>{data[0].fullNameForSearch}</title></Head>
-                        <main className={styles.main}>
+                        <main className={stylesPlayerInfo.cardContainer}>
                             <h1 className={styles.title}>
                                 {data[0].fullNameForSearch}
                             </h1>
@@ -33,7 +34,7 @@ export default function PlayerInfo() {
                     </> :
                     <>
                         <Head><title>Loading...</title></Head>
-                        <Loading />
+                        <Loading color={'white'}/>
                     </>
             }
         </div>

@@ -7,9 +7,8 @@ export default function Paginator({ backEvent, nextEvent, actualPage, setActualP
 
     React.useEffect(() => {
         let pages = []
-        const totalPages = 10
-        for (let i = 0; i < totalPages; i++) {
-            pages.push(i * 10)
+        for (let i = 0; i < (100 / 20); i++) {
+            pages.push(i * 20)
         }
         setTotalPages(pages)
     }, [])
@@ -44,8 +43,8 @@ export default function Paginator({ backEvent, nextEvent, actualPage, setActualP
                 )
             })}
             <button
-                className={actualPage === 90 ? `${styles.changePageBtnDisabled}` : `${styles.changePageBtn}`}
-                disabled={actualPage === 90}
+                className={actualPage === 80 ? `${styles.changePageBtnDisabled}` : `${styles.changePageBtn}`}
+                disabled={actualPage === 80}
                 onClick={nextEvent}>{'>'}
             </button>
         </div>
